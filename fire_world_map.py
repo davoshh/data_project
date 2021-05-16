@@ -11,9 +11,9 @@ with open(filename) as f:
     # Collect coordinate and brightness data.
     lons, lats, brights = [], [], []
     for row in reader:
-        lons.append(row[2])
-        lats.append(row[1])
-        brights.append(row[3])
+        lons.append(row[1])
+        lats.append(row[0])
+        brights.append(float(row[2]))
 
 # Map the data.
 data = [{
